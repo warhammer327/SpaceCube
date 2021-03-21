@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("level sesh");
         completeLevelUI.SetActive(true);
-       // Invoke("Restart",restartDelay);
+        Invoke("Restart",restartDelay); // remove this once you have designed next level
     }
     public void EndGame()
     {
@@ -20,10 +20,11 @@ public class GameManager : MonoBehaviour
             //Debug.Log("Dhaan khete shagotom madarchor"); 
             endGame = true;
             //Restart();
+        restartLevelUI.SetActive(true);
             Invoke("Restart",restartDelay);
         }
     }
-
+    public GameObject restartLevelUI;
     void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
