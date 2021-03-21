@@ -10,11 +10,13 @@ public class PlayerMovement : MonoBehaviour
     Boolean left, right;
 
     void Update() {
+        left = false;
+        right = false;
         if (Input.GetKey("d"))
         {
             left = true;   
         }    
-        
+         
         if (Input.GetKey("a"))
         {
             right = true;   
@@ -24,13 +26,17 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         rigidbody.AddForce(-forwardForce*Time.deltaTime,0,0);
-        if (Input.GetKey("d"))
+        if (left)
         {
-            rigidbody.AddForce(0,0,Time.deltaTime*sideForce);
+            rigidbody.AddForce(0,0,Time.deltaTime*sideForce,ForceMode.VelocityChange);
         }
-        if (Input.GetKey("a"))
+        if (right)
         {
-            rigidbody.AddForce(0,0,-Time.deltaTime*sideForce);
+            rigidbody.AddForce(0,0,-Time.deltaTime*sideForce,ForceMode.VelocityChange);
+        }
+        if(rigidbody.position.y <-2f)
+        {
+            FindObjectOfType<GameManager>().EndGame();
         }
     }
 }
