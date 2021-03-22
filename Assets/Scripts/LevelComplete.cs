@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelComplete : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // This script is attached to 'LevelComplete' under canvas. It is called in animation. 
     public void LoadNextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
