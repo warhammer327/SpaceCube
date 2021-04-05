@@ -127,8 +127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 982812703719625068}
-  forwardForce: 400
-  sideForce: 100
+  forwardForce: 1500
+  newSideForce: 88
 --- !u!114 &982812703719625078
 MonoBehaviour:
   m_ObjectHideFlags: 0
