@@ -4,12 +4,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Rigidbody rigidbody;
+    public Rigidbody rb;
     public float forwardForce = 1500f;
-    public static float newSideForce=100f;
+    public static float newSideForce=25f;
     // Update is called once per frame
     Boolean left, right, gamePaused = true;
-
+    public GameObject pauseLevelUI;
     public void AdjustSensitivity(float newSpeed)
     {
         newSideForce = newSpeed;
@@ -33,33 +33,36 @@ public class PlayerMovement : MonoBehaviour
         {
             if(gamePaused)
             {
+
                 Time.timeScale = 0f; 
+                pauseLevelUI.SetActive(true);
                 gamePaused = false;
             }
             else
             {
                 Time.timeScale = 1f;
+                pauseLevelUI.SetActive(false);
                 gamePaused = true;
             }
         }
 
-        Debug.Log("Hello newSideForce is " + newSideForce);
+        //Debug.Log("Hello newSideForce is " + newSideForce);
     }
     void FixedUpdate()
     {
 
-        rigidbody.AddForce(-forwardForce * Time.deltaTime, 0, 0);
+        rb.AddForce(-forwardForce * Time.deltaTime, 0, 0);
         if (left)
         {
-            rigidbody.AddForce(0, 0, Time.deltaTime * newSideForce, ForceMode.VelocityChange);
-            Debug.Log("ON GAME " + newSideForce);
+            rb.AddForce(0, 0, Time.deltaTime * newSideForce, ForceMode.VelocityChange);
+            //Debug.Log("ON GAME " + newSideForce);
         }
         if (right)
         {
-            rigidbody.AddForce(0, 0, -Time.deltaTime * newSideForce, ForceMode.VelocityChange);
-            Debug.Log("ON GAME " + newSideForce);
+            rb.AddForce(0, 0, -Time.deltaTime * newSideForce, ForceMode.VelocityChange);
+            //Debug.Log("ON GAME " + newSideForce);
         }
-        if (rigidbody.position.y < -2f)
+        if (rb.position.y < -2f)
         {
             FindObjectOfType<GameManager>().EndGame();
         }
