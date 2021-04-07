@@ -1,0 +1,62 @@
+[33mcommit 23e2487b111ff40e23ea86476d8c18ad7fc7f7e1[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: warhammer327 <rizwansm@outlook.com>
+Date:   Mon Apr 5 18:58:48 2021 +0600
+
+    added sensitivity adjustment
+
+[33mcommit 957031c057f0b67a3d279eef285613fdbbf4c9b1[m
+Author: warhammer327 <rizwansm@outlook.com>
+Date:   Mon Apr 5 16:02:08 2021 +0600
+
+    fixed lighting
+
+[33mcommit ac392f064ea931f33b3a67aed328cd0347325400[m[33m ([m[1;31morigin/master[m[33m)[m
+Merge: cd57b32 98bc4fe
+Author: warhammer327 <rizwansm@outlook.com>
+Date:   Mon Mar 22 20:39:19 2021 +0600
+
+    Merge branch 'master' of github.com:warhammer327/SpaceCube
+
+[33mcommit cd57b329f86e7ab47f2bb0ce18b1b0e17d28f4b6[m
+Author: warhammer327 <rizwansm@outlook.com>
+Date:   Mon Mar 22 20:38:44 2021 +0600
+
+    Start screen, level and credits are set
+
+[33mcommit 09a2620a074d7eeac7680b80cedefcb5d37a0d5d[m
+Author: warhammer327 <rizwansm@outlook.com>
+Date:   Mon Mar 22 17:43:03 2021 +0600
+
+    Added three more levels
+
+[33mcommit 98bc4fe82cd0003106efbb03dc8fff83b2dd2ccb[m
+Author: Rizwan <rizwansm@outlook.com>
+Date:   Mon Mar 22 15:37:00 2021 +0600
+
+    Wrote readme
+
+[33mcommit 915e0b1b1abeb618d8e4a7e5f32f622bc5bef497[m
+Author: warhammer327 <rizwansm@outlook.com>
+Date:   Sun Mar 21 23:53:37 2021 +0600
+
+    Show message screen when restarting
+
+[33mcommit 32850b658fcb4f904aee66433dee05ca3b3fc659[m
+Author: warhammer327 <rizwansm@outlook.com>
+Date:   Sun Mar 21 23:41:51 2021 +0600
+
+    load level function complete
+
+[33mcommit a0dbf85ca9b59fc3344878539591c1102f2befa4[m
+Author: warhammer327 <rizwansm@outlook.com>
+Date:   Sun Mar 21 23:01:31 2021 +0600
+
+    FininLine sends message to console when triggered
+
+[33mcommit 9e968befafb403bb996889421f568eb53d0ca7e3[m
+Author: warhammer327 <rizwansm@outlook.com>
+Date:   Sat Mar 20 22:50:20 2021 +0600
+
+    First commit
+    
+    Finished player movement setup

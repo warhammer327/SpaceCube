@@ -6,9 +6,9 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     public Rigidbody rigidbody;
     public float forwardForce = 1500f;
-    public static float newSideForce;
+    public static float newSideForce=100f;
     // Update is called once per frame
-    Boolean left, right;
+    Boolean left, right, gamePaused = true;
 
     public void AdjustSensitivity(float newSpeed)
     {
@@ -27,6 +27,20 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey("a"))
         {
             right = true;
+        }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(gamePaused)
+            {
+                Time.timeScale = 0f; 
+                gamePaused = false;
+            }
+            else
+            {
+                Time.timeScale = 1f;
+                gamePaused = true;
+            }
         }
 
         Debug.Log("Hello newSideForce is " + newSideForce);
