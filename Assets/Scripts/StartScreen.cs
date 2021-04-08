@@ -8,4 +8,12 @@ public class StartScreen : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
+    public void GoToStart()
+    {
+        SceneManager.LoadScene("Start");
+    }
+    public void NowQuit()
+    {
+        Application.Quit();
+    }
 }
